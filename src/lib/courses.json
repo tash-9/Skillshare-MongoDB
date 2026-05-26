@@ -1,0 +1,178 @@
+[
+  {
+    "id": "1",
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "Alex Rivera",
+    "duration": "48 hours",
+    "rating": 4.9,
+    "level": "Beginner",
+    "category": "Development",
+    "enrolledStudents": 12450,
+    "description": "Master HTML, CSS, JavaScript, React, Node.js, and databases from scratch. This comprehensive course takes you from zero to a full-stack developer with real-world projects and industry best practices.",
+    "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80",
+    "lessons": [
+      "HTML5 Foundations & Semantic Markup",
+      "CSS3, Flexbox & Grid Mastery",
+      "JavaScript ES6+ Deep Dive",
+      "React & Component Architecture",
+      "Node.js & Express Backend",
+      "MongoDB & Database Design",
+      "REST APIs & Authentication",
+      "Deployment & DevOps Basics"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "UI/UX Design Masterclass",
+    "instructor": "Sarah Chen",
+    "duration": "32 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "category": "Design",
+    "enrolledStudents": 8920,
+    "description": "Learn the full UX design process from user research to high-fidelity prototypes. Master Figma, design systems, usability testing, and create portfolio-worthy case studies that land jobs.",
+    "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80",
+    "lessons": [
+      "Design Thinking & UX Process",
+      "User Research & Personas",
+      "Information Architecture",
+      "Wireframing Techniques",
+      "Figma: From Beginner to Pro",
+      "Design Systems & Components",
+      "Prototyping & Animations",
+      "Usability Testing Methods"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Data Science with Python",
+    "instructor": "Dr. Marcus Lee",
+    "duration": "56 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "category": "Data Science",
+    "enrolledStudents": 15670,
+    "description": "Become a data scientist using Python, Pandas, NumPy, Matplotlib, and scikit-learn. Work through real datasets, build ML models, and create compelling visualizations to tell data-driven stories.",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+    "lessons": [
+      "Python for Data Analysis",
+      "NumPy & Array Computing",
+      "Pandas: Data Wrangling",
+      "Data Visualization with Matplotlib",
+      "Statistical Analysis Fundamentals",
+      "Machine Learning with scikit-learn",
+      "Natural Language Processing",
+      "Capstone: Real-World Project"
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Digital Marketing Mastery",
+    "instructor": "Priya Patel",
+    "duration": "24 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "category": "Marketing",
+    "enrolledStudents": 6340,
+    "description": "Learn SEO, social media marketing, Google Ads, email campaigns, and analytics. Build and execute data-driven marketing strategies that generate real ROI for businesses of all sizes.",
+    "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600&q=80",
+    "lessons": [
+      "Digital Marketing Fundamentals",
+      "SEO: On-page & Off-page",
+      "Google Ads & PPC Campaigns",
+      "Social Media Strategy",
+      "Email Marketing Automation",
+      "Content Marketing & Copywriting",
+      "Analytics & KPI Tracking",
+      "Growth Hacking Techniques"
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Mobile App Development with React Native",
+    "instructor": "James Okonkwo",
+    "duration": "40 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "category": "Development",
+    "enrolledStudents": 9100,
+    "description": "Build cross-platform iOS and Android apps using React Native. Learn navigation, state management, native device APIs, and publish your apps to both app stores with complete CI/CD pipelines.",
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80",
+    "lessons": [
+      "React Native Environment Setup",
+      "Core Components & Styling",
+      "Navigation with React Navigation",
+      "State Management: Redux & Zustand",
+      "Native APIs: Camera, GPS, Notifications",
+      "Backend Integration & APIs",
+      "Testing & Debugging",
+      "App Store Publishing"
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Cybersecurity Fundamentals",
+    "instructor": "Elena Vasquez",
+    "duration": "36 hours",
+    "rating": 4.9,
+    "level": "Beginner",
+    "category": "Security",
+    "enrolledStudents": 7850,
+    "description": "Start your cybersecurity journey with ethical hacking, network security, cryptography, and penetration testing fundamentals. Prepare for CompTIA Security+ and CEH certifications.",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80",
+    "lessons": [
+      "Security Concepts & Terminology",
+      "Network Security Fundamentals",
+      "Ethical Hacking Introduction",
+      "Vulnerability Assessment",
+      "Cryptography & Encryption",
+      "Web Application Security",
+      "Penetration Testing Basics",
+      "Incident Response Planning"
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Cloud Computing with AWS",
+    "instructor": "Tom Richardson",
+    "duration": "44 hours",
+    "rating": 4.7,
+    "level": "Advanced",
+    "category": "Development",
+    "enrolledStudents": 11200,
+    "description": "Master AWS services including EC2, S3, RDS, Lambda, and CloudFormation. Learn cloud architecture patterns, serverless computing, and prepare for the AWS Solutions Architect certification.",
+    "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&q=80",
+    "lessons": [
+      "AWS Cloud Fundamentals",
+      "EC2 & Virtual Machines",
+      "S3 Storage & CDN",
+      "RDS & Database Services",
+      "Lambda & Serverless Architecture",
+      "VPC & Network Security",
+      "CloudFormation & IaC",
+      "Solutions Architect Exam Prep"
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Graphic Design Essentials",
+    "instructor": "Nina Kowalski",
+    "duration": "28 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "category": "Design",
+    "enrolledStudents": 5430,
+    "description": "Learn Adobe Photoshop, Illustrator, and InDesign to create stunning visuals, brand identities, and print materials. Build a professional design portfolio that showcases your creativity.",
+    "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80",
+    "lessons": [
+      "Design Principles & Theory",
+      "Typography & Color Theory",
+      "Adobe Photoshop Essentials",
+      "Adobe Illustrator Mastery",
+      "Logo & Brand Identity Design",
+      "Print Design & InDesign",
+      "Social Media Graphics",
+      "Portfolio Development"
+    ]
+  }
+]
