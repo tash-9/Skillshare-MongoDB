@@ -1,94 +1,107 @@
-import { HiStar } from 'react-icons/hi';
-import { FiUsers } from 'react-icons/fi';
+import { FiStar, FiUsers } from "react-icons/fi";
 
 const instructors = [
   {
-    name: 'Alex Rivera',
-    role: 'Full-Stack Developer',
-    avatar: 'https://ui-avatars.com/api/?name=Alex+Rivera&background=6366f1&color=fff&size=128',
+    name: "Md Jamil Hasan",
+    role: "Full-Stack Developer",
+    category: "Development",
     rating: 4.9,
-    students: 12450,
+    students: "12.4K",
     courses: 4,
-    specialty: 'Development',
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&q=80",
   },
   {
-    name: 'Sarah Chen',
-    role: 'UX Design Lead',
-    avatar: 'https://ui-avatars.com/api/?name=Sarah+Chen&background=ec4899&color=fff&size=128',
+    name: "Samira Alam",
+    role: "UX Design Lead",
+    category: "Design",
     rating: 4.8,
-    students: 8920,
+    students: "8.9K",
     courses: 3,
-    specialty: 'Design',
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80",
   },
   {
-    name: 'Dr. Marcus Lee',
-    role: 'Data Scientist',
-    avatar: 'https://ui-avatars.com/api/?name=Marcus+Lee&background=22d3ee&color=fff&size=128',
+    name: "Dr. Rock Lee",
+    role: "Data Scientist",
+    category: "Data Science",
     rating: 4.9,
-    students: 15670,
+    students: "15.7K",
     courses: 5,
-    specialty: 'Data Science',
+    image:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&q=80",
   },
   {
-    name: 'Elena Vasquez',
-    role: 'Cybersecurity Expert',
-    avatar: 'https://ui-avatars.com/api/?name=Elena+Vasquez&background=f59e0b&color=fff&size=128',
+    name: "Christiana Ronaldo",
+    role: "Cybersecurity Expert",
+    category: "Security",
     rating: 4.9,
-    students: 7850,
+    students: "7.8K",
     courses: 2,
-    specialty: 'Security',
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80",
   },
 ];
 
 export default function TopInstructors() {
   return (
-    <section className="py-24 bg-[#080b14]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <span className="inline-block text-xs font-bold tracking-widest uppercase text-[#6366f1] mb-3">
-            🏆 Expert Faculty
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
-            Meet Our Top <span className="gradient-text">Instructors</span>
+    <section className="py-20 bg-[#080b14]">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-bold text-white">
+            Meet Our Top{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
+              Instructors
+            </span>
           </h2>
-          <p className="text-[#64748b] mt-2 max-w-xl mx-auto">
-            Industry veterans with years of hands-on experience, here to guide your journey.
+          <p className="text-slate-400 mt-3">
+            Industry veterans with years of hands-on experience, here to guide
+            your journey.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {instructors.map((inst, i) => (
+        <div className="grid md:grid-cols-2 gap-8">
+          {instructors.map((instructor) => (
             <div
-              key={i}
-              className="group p-6 rounded-2xl bg-[#0f1628] border border-[#1e2a45] hover:border-[#6366f1]/50 transition-all hover:shadow-lg hover:shadow-indigo-500/10 text-center"
+              key={instructor.name}
+              className="card bg-[#111827] border border-indigo-500/30 shadow-xl"
             >
-              <div className="relative w-20 h-20 mx-auto mb-4">
-                <img
-                  src={inst.avatar}
-                  alt={inst.name}
-                  className="w-20 h-20 rounded-2xl object-cover group-hover:scale-105 transition-transform"
-                />
-                <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-[#0f1628]" />
-              </div>
-
-              <h3 className="font-bold text-white mb-0.5" style={{ fontFamily: 'Syne, sans-serif' }}>{inst.name}</h3>
-              <p className="text-xs text-[#64748b] mb-3">{inst.role}</p>
-
-              <span className="inline-block text-xs px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 mb-4">
-                {inst.specialty}
-              </span>
-
-              <div className="flex items-center justify-between text-xs text-[#64748b] pt-4 border-t border-[#1e2a45]">
-                <div className="flex items-center gap-1 text-[#fbbf24]">
-                  <HiStar />
-                  <span className="text-white font-semibold">{inst.rating}</span>
+              <div className="card-body items-center text-center">
+                <div className="relative">
+                  <img
+                    src={instructor.image}
+                    alt={instructor.name}
+                    className="w-24 h-24 rounded-3xl object-cover"
+                  />
+                  <span className="absolute bottom-0 right-0 w-5 h-5 bg-green-500 border-2 border-[#111827] rounded-full"></span>
                 </div>
-                <div className="flex items-center gap-1">
-                  <FiUsers className="text-[#6366f1]" />
-                  <span>{(inst.students / 1000).toFixed(1)}K</span>
-                </div>
-                <div>
-                  <span className="text-white font-semibold">{inst.courses}</span> courses
+
+                <h3 className="text-xl font-bold text-white mt-3">
+                  {instructor.name}
+                </h3>
+
+                <p className="text-sm text-slate-400">{instructor.role}</p>
+
+                <span className="badge badge-primary badge-outline mt-2">
+                  {instructor.category}
+                </span>
+
+                <div className="divider"></div>
+
+                <div className="grid grid-cols-3 w-full text-sm">
+                  <div className="flex items-center justify-center gap-1 text-white">
+                    <FiStar className="text-yellow-400" />
+                    {instructor.rating}
+                  </div>
+
+                  <div className="flex items-center justify-center gap-1 text-slate-400">
+                    <FiUsers />
+                    {instructor.students}
+                  </div>
+
+                  <div className="text-white">
+                    {instructor.courses} courses
+                  </div>
                 </div>
               </div>
             </div>

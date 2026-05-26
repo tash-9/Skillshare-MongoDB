@@ -1,148 +1,98 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
-import { FiArrowRight, FiPlay } from 'react-icons/fi';
-import { HiSparkles } from 'react-icons/hi';
-
-const slides = [
-  {
-    badge: 'New Courses Available',
-    heading: 'Upgrade Your Skills',
-    highlight: 'Today 🚀',
-    sub: 'Join 50,000+ learners mastering in-demand skills with expert-led courses.',
-  },
-  {
-    badge: 'Industry Expert Instructors',
-    heading: 'Learn from the',
-    highlight: 'Best in Class',
-    sub: 'World-class instructors guide you from fundamentals to advanced mastery.',
-  },
-  {
-    badge: 'Certified Learning Paths',
-    heading: 'Build Your',
-    highlight: 'Dream Career',
-    sub: 'Earn industry-recognized certificates and land your dream job faster.',
-  },
-];
-
-const stats = [
-  { value: '50K+', label: 'Students' },
-  { value: '80+', label: 'Courses' },
-  { value: '4.9★', label: 'Avg Rating' },
-  { value: '95%', label: 'Job Rate' },
-];
+import Link from "next/link";
+import { FiArrowRight, FiPlay } from "react-icons/fi";
 
 export default function HeroBanner() {
   return (
-    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-[#080b14]">
-      {/* Background effects */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-amber-500/8 rounded-full blur-[100px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[150px]" />
-        {/* Grid lines */}
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: 'linear-gradient(#6366f1 1px, transparent 1px), linear-gradient(90deg, #6366f1 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
-      </div>
+    <section className="relative overflow-hidden bg-[#080b14] min-h-[calc(100vh-72px)] flex items-center">
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:80px_80px]" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left: Slider text */}
-          <div>
-            <Swiper
-              modules={[Autoplay, Pagination, EffectFade]}
-              effect="fade"
-              autoplay={{ delay: 4000, disableOnInteraction: false }}
-              pagination={{ clickable: true, el: '.hero-pagination' }}
-              loop
-              className="hero-swiper"
-            >
-              {slides.map((slide, i) => (
-                <SwiperSlide key={i}>
-                  <div className="space-y-5 pb-8">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20">
-                      <HiSparkles className="text-[#818cf8] text-sm" />
-                      <span className="text-xs font-semibold text-[#818cf8]">{slide.badge}</span>
-                    </div>
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
-                      <span className="text-white">{slide.heading}</span>
-                      <br />
-                      <span className="gradient-text">{slide.highlight}</span>
-                    </h1>
-                    <p className="text-[#94a3b8] text-lg max-w-md leading-relaxed">{slide.sub}</p>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-
-            {/* Pagination dots */}
-            <div className="hero-pagination flex gap-2 mb-6" />
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <Link
-                href="/allcourses"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-white btn-glow"
-              >
-                Start Learning <FiArrowRight />
-              </Link>
-              <button className="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl font-semibold text-[#94a3b8] hover:text-white border border-[#1e2a45] hover:border-[#6366f1] transition-all">
-                <div className="w-8 h-8 rounded-full bg-[#6366f1]/20 flex items-center justify-center">
-                  <FiPlay className="text-[#818cf8] text-xs ml-0.5" />
-                </div>
-                Watch Preview
-              </button>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-4 gap-4 mt-10 pt-8 border-t border-[#1e2a45]">
-              {stats.map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <div className="text-xl font-bold text-white" style={{ fontFamily: 'Syne, sans-serif' }}>{stat.value}</div>
-                  <div className="text-xs text-[#64748b] mt-0.5">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
+        {/* Left Content */}
+        <div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-400/30 text-indigo-300 text-sm mb-6">
+            ✦ Learn from Industry Experts
           </div>
 
-          {/* Right: Illustration */}
-          <div className="relative hidden lg:block">
-            <div className="animate-float-slow">
-              <Image
-                src="/assets/hero-illustration.svg"
-                alt="Learning illustration"
-                width={600}
-                height={500}
-                className="w-full h-auto"
-              />
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
+            Upgrade Your
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
+              Skills Today 🚀
+            </span>
+          </h1>
+
+          <p className="mt-6 text-lg text-slate-400 max-w-xl leading-relaxed">
+            Join 50,000+ learners mastering in-demand skills with expert-led
+            courses in development, design, marketing, and more.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link href="/courses" className="btn btn-primary">
+              Start Learning <FiArrowRight />
+            </Link>
+
+            <button className="btn btn-outline">
+              <FiPlay /> Watch Preview
+            </button>
+          </div>
+
+          <div className="mt-10 pt-8 border-t border-slate-800 grid grid-cols-2 sm:grid-cols-4 gap-6">
+            <div>
+              <h3 className="text-2xl font-bold text-white">50K+</h3>
+              <p className="text-sm text-slate-400">Students</p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white">80+</h3>
+              <p className="text-sm text-slate-400">Courses</p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white">4.9★</h3>
+              <p className="text-sm text-slate-400">Avg Rating</p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white">95%</h3>
+              <p className="text-sm text-slate-400">Job Rate</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Visual */}
+        <div className="relative hidden lg:block">
+          <div className="relative mx-auto w-full max-w-xl rounded-3xl border border-indigo-500/30 bg-slate-900/80 p-8 shadow-2xl">
+            <div className="rounded-2xl bg-[#151b31] p-6 border border-slate-700">
+              <div className="space-y-4">
+                <div className="h-4 w-32 bg-indigo-500 rounded-full" />
+                <div className="h-3 w-52 bg-amber-500/80 rounded-full" />
+                <div className="h-3 w-72 bg-slate-600 rounded-full" />
+                <div className="h-3 w-44 bg-cyan-500/80 rounded-full" />
+                <div className="h-3 w-60 bg-purple-500/80 rounded-full" />
+              </div>
+
+              <div className="mt-8 flex items-center justify-center">
+                <div className="w-20 h-20 rounded-full bg-indigo-500 flex items-center justify-center shadow-lg shadow-indigo-500/40">
+                  <FiPlay className="text-white text-3xl ml-1" />
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute -left-10 top-24 bg-indigo-600/20 border border-indigo-400 rounded-2xl p-4">
+              <p className="text-xs text-indigo-300">Progress</p>
+              <p className="text-white font-bold">70% Complete</p>
+            </div>
+
+            <div className="absolute -right-12 top-10 bg-amber-500/10 border border-amber-400 rounded-2xl p-4">
+              <p className="text-xs text-amber-300">Live Students</p>
+              <p className="text-white font-bold">2.4K</p>
+            </div>
+
+            <div className="absolute right-0 -bottom-8 bg-cyan-500/10 border border-cyan-400 rounded-2xl p-4">
+              <p className="text-xs text-cyan-300">Certificate</p>
+              <p className="text-white font-bold">Earned!</p>
             </div>
           </div>
         </div>
       </div>
-
-      <style jsx global>{`
-        .hero-swiper .swiper-wrapper { align-items: flex-start; }
-        .hero-pagination .swiper-pagination-bullet {
-          width: 8px; height: 8px;
-          background: #1e2a45; opacity: 1;
-          border-radius: 4px; transition: all 0.3s;
-        }
-        .hero-pagination .swiper-pagination-bullet-active {
-          width: 24px; background: #6366f1;
-        }
-      `}</style>
     </section>
   );
 }

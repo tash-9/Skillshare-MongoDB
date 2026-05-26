@@ -123,32 +123,23 @@ export default function Navbar() {
             ))}
           </ul>
           {session ? (
-            <div className="flex items-center justify-between pt-3 border-t border-[#1e2a45]">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-[#6366f1] flex items-center justify-center text-sm font-bold text-white">
-                  {(session.user?.name || 'U')[0].toUpperCase()}
-                </div>
-                <span className="text-sm font-medium">{session.user?.name}</span>
+            <div className="flex items-center gap-3">
+              <img src={session?.user?.image || "/default-avatar.png"} alt="User" 
+              className="w-9 h-9 rounded-full"
+              />
+
+              <Link href="/auth/signout" className="btn btn-sm btn-error"> Logout </Link>
               </div>
-              <button
-                onClick={() => { handleLogout(); setMenuOpen(false); }}
-                className="px-4 py-1.5 text-sm font-medium text-[#f87171] border border-[#f87171]/30 rounded-lg"
-              >
-                Logout
-              </button>
-            </div>
-          ) : (
-            <div className="flex gap-3 pt-3 border-t border-[#1e2a45]">
-              <Link href="/login" onClick={() => setMenuOpen(false)} className="flex-1 text-center px-4 py-2 text-sm font-medium border border-[#1e2a45] text-[#94a3b8] rounded-lg">
-                Login
-              </Link>
-              <Link href="/register" onClick={() => setMenuOpen(false)} className="flex-1 text-center px-4 py-2 text-sm font-medium bg-[#6366f1] text-white rounded-lg">
-                Register
-              </Link>
-            </div>
-          )}
-        </div>
-      )}
+              ) : (
+                <div className="flex items-center gap-3">
+                  <Link href="/login" className="btn btn-sm btn-ghost"> Login </Link>
+                  <Link href="/register" className="btn btn-sm btn-primary"> Register </Link>
+              </div>
+              )
+            }
+          </div>
+        )
+      }
     </nav>
   );
 }
