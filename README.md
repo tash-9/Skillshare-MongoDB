@@ -3,7 +3,7 @@
 A modern online learning platform where users can explore courses, watch lessons, and enroll in skill-based programs like Web Development, Design, Marketing, and more.
 
 ## 🔗 Live URL
-
+[Click here to view the project](https://skillshare-mongo-db-kf3.vercel.app/)
 
 ## ✨ Key Features
 
