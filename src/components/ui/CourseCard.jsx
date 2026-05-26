@@ -27,7 +27,7 @@ export default function CourseCard({ course }) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0f1628]/60 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-[#0f1628]/60 to-transparent" />
         <span className={`absolute top-3 left-3 text-xs font-semibold px-2.5 py-1 rounded-full border ${colors.bg} ${colors.text} ${colors.border}`}>
           {category}
         </span>

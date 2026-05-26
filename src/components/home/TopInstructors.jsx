@@ -50,7 +50,7 @@ export default function TopInstructors() {
         <div className="text-center mb-14">
           <h2 className="text-4xl font-bold text-white">
             Meet Our Top{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-400 to-cyan-400">
               Instructors
             </span>
           </h2>
