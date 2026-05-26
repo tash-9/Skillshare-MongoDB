@@ -86,7 +86,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-sm text-[#64748b]">
                 <FiMapPin className="w-4 h-4 text-[#6366f1] shrink-0 mt-0.5" />
-                123 Innovation Drive, San Francisco, CA 94105
+                SkilShare Innovatives, Road 6, Dhanmondi, Dhaka 1209, Bangladesh
               </li>
             </ul>
           </div>
