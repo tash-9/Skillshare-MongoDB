@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import 'swiper/css';
